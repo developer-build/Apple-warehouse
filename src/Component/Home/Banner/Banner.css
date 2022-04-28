@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.banner-container {
+  background-color: black;
+  height: 90vh;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+.banner-text h1 {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  line-height: 1.7;
+}
+.banner-container p {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  line-height: 1.7;
+}
+.banner-container button {
+  background-color: #f47e30;
+  padding: 10px 35px;
+  color: white;
+  font-size: 18px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: 0.5s;
+}
+.banner-container button:hover {
+  background-color: #c45c16;
+}
