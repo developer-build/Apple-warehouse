@@ -1,0 +1,55 @@
+.inventory {
+  border-radius: 15px;
+  position: relative;
+  transform: translate(0.8);
+  transition: all 0.3s ease-in-out;
+  margin: 30px auto;
+  text-align: center;
+  padding: 5px;
+}
+.inventory:hover {
+  background-color: #2b3039;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.inventory img {
+  width: 200px;
+}
+.inventory-text {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  margin: 25px 0;
+}
+.inventory h3 {
+  font-size: 20px;
+}
+.inventory p {
+  font-size: 14px;
+  color: rgb(255, 255, 255, 0.3);
+  text-align: center;
+}
+.inventory h5 {
+  color: #fe8033;
+  font-size: 20px;
+  font-weight: 600;
+}
+.inventory h6 {
+  font-size: 15px;
+}
+.inventory .inventory-btn {
+  background-color: #2d343e;
+  width: 165px;
+  border: none;
+  height: 50px;
+  border-radius: 35px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(255, 255, 255, 0.5);
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+}
+
+.inventory:hover .inventory-btn {
+  color: white;
+  background-color: #fe8033;
+}

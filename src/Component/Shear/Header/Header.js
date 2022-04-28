@@ -3,10 +3,10 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 const Header = () => {
   return (
-    <div>
+    <div className=" sticky-top">
       <Navbar
         collapseOnSelect
-        className="py-3"
+        className="py-3 shadow"
         expand="lg"
         bg="dark"
         variant="dark"

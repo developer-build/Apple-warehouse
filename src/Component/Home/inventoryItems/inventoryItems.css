@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+.inventory-items-container {
+  background: #242b36;
+  padding: 10px;
+}
+h2 {
+  font-family: "Roboto Slab", serif;
+  color: white;
+}

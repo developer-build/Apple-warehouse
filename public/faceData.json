@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Apple iPhone 12",
+    "img": "https://i.ibb.co/nQpMhWh/Screenshot-33-removebg-preview.png",
+    "price": 50,
+    "quantity": 10,
+    "supplierName": "James",
+    "description": "Stream your favourite movies, TV shows and games with super-fast 5G",
+    "_id": 1
+  },
+  {
+    "name": "Apple iPhone 12",
+    "img": "https://i.ibb.co/nQpMhWh/Screenshot-33-removebg-preview.png",
+    "price": 50,
+    "quantity": 10,
+    "supplierName": "James",
+    "description": "Stream your favourite movies, TV shows and games with super-fast 5G",
+    "_id": 2
+  },
+  {
+    "name": "Apple iPhone 12",
+    "img": "https://i.ibb.co/nQpMhWh/Screenshot-33-removebg-preview.png",
+    "price": 50,
+    "quantity": 10,
+    "supplierName": "James",
+    "description": "Stream your favourite movies, TV shows and games with super-fast 5G",
+    "_id": 3
+  },
+  {
+    "name": "Apple iPhone 12",
+    "img": "https://i.ibb.co/nQpMhWh/Screenshot-33-removebg-preview.png",
+    "price": 50,
+    "quantity": 10,
+    "supplierName": "James",
+    "description": "Stream your favourite movies, TV shows and games with super-fast 5G",
+    "_id": 4
+  },
+  {
+    "name": "Apple iPhone 12",
+    "img": "https://i.ibb.co/nQpMhWh/Screenshot-33-removebg-preview.png",
+    "price": 50,
+    "quantity": 10,
+    "supplierName": "James",
+    "description": "Stream your favourite movies, TV shows and games with super-fast 5G",
+    "_id": 5
+  },
+  {
+    "name": "Apple iPhone 12",
+    "img": "https://i.ibb.co/nQpMhWh/Screenshot-33-removebg-preview.png",
+    "price": 50,
+    "quantity": 10,
+    "supplierName": "James",
+    "description": "Stream your favourite movies, TV shows and games with super-fast 5G",
+    "_id": 6
+  }
+]

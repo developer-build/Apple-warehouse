@@ -1,6 +1,6 @@
 import React from "react";
 import "./Banner.css";
-import banner2 from "../../../Assets/Images/Untitled design.png";
+import banner from "../../../Assets/Images/banner.png";
 
 const Banner = () => {
   return (
@@ -19,12 +19,12 @@ const Banner = () => {
                 Offer ends 02/08/2022
               </p>
               <div>
-                <button>Add To Cart</button>
+                <button>Stock Update</button>
               </div>
             </div>
           </div>
           <div>
-            <img className="img-fluid" src={banner2} alt="" />
+            <img className="img-fluid" src={banner} alt="" />
           </div>
         </div>
       </div>
