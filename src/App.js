@@ -12,6 +12,8 @@ import "react-toastify/dist/ReactToastify.css";
 import NotFound from "./Component/Pages/NotFound/NotFound";
 import Inventory from "./Component/Pages/Inventory/Inventory";
 import RequireAuth from "./RequireAuth/RequireAuth";
+import ManageInventories from "./Component/Pages/ManageInventories/ManageInventories";
+import AddNewItem from "./Component/Pages/AddNewItem/AddNewItem";
 
 function App() {
   return (
@@ -31,7 +33,9 @@ function App() {
             </RequireAuth>
           }
         ></Route>
-        <Route path="*" element={<NotFound />}></Route>
+        <Route path="/manage-inventories" element={<ManageInventories />} />
+        <Route path="/add-new-item" element={<AddNewItem />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
       <ToastContainer />

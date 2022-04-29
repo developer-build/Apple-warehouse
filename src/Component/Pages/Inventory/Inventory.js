@@ -1,5 +1,7 @@
+import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./Inventory.css";
 
 const Inventory = () => {
@@ -17,6 +19,14 @@ const Inventory = () => {
           />
           <button>Submit</button>
         </form>
+      </div>
+      <div className="text-center pb-3 mt-5">
+        <Link to="/manage-inventories">
+          <button className="manage_inventories_btn text-black">
+            Manage Inventories
+            <FontAwesomeIcon className="ps-2" icon={faAnglesRight} />
+          </button>
+        </Link>
       </div>
     </div>
   );

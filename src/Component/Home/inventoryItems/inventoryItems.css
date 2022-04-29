@@ -8,3 +8,13 @@ h2 {
   font-family: "Roboto Slab", serif;
   color: white;
 }
+
+.manage_inventories_btn {
+  background-color: transparent;
+  border: 2px solid #fe8033;
+  color: white;
+  font-weight: 600;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 50px;
+}

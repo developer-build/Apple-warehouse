@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Inventory from "../inventoryItem/InventoryItem";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSignIn, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
 import "./inventoryItems.css";
+import { Link } from "react-router-dom";
 
 const InventoryItems = () => {
   const [inventoryItems, setInventoryItems] = useState([]);
@@ -21,6 +24,14 @@ const InventoryItems = () => {
           {inventoryItems.map((inventory) => (
             <Inventory inventory={inventory} key={inventory._id} />
           ))}
+        </div>
+        <div className="text-center pb-3 mt-5">
+          <Link to="/manage-inventories">
+            <button className="manage_inventories_btn">
+              Manage Inventories
+              <FontAwesomeIcon className="ps-2" icon={faAnglesRight} />
+            </button>
+          </Link>
         </div>
       </div>
     </div>

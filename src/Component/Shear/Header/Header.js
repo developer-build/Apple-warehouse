@@ -16,7 +16,7 @@ const Header = () => {
     return <Spinners />;
   }
   return (
-    <div className=" sticky-top navbar-container">
+    <div className=" sticky-top navbar-container p-2">
       <Navbar collapseOnSelect expand="lg" variant="dark">
         <Container>
           <Navbar.Brand as={Link} to="/">
