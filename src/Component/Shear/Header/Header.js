@@ -28,6 +28,29 @@ const Header = () => {
               <NavLink to="/" className="navigation-link">
                 Home
               </NavLink>
+
+              {user ? (
+                <NavLink to="/manage-inventories" className="navigation-link">
+                  Manage Items
+                </NavLink>
+              ) : (
+                ""
+              )}
+              {user ? (
+                <NavLink to="/add-new-item" className="navigation-link">
+                  Add Item
+                </NavLink>
+              ) : (
+                ""
+              )}
+              {user ? (
+                <NavLink to="/my-items" className="navigation-link">
+                  My items
+                </NavLink>
+              ) : (
+                ""
+              )}
+
               <NavLink to="/about" className="navigation-link">
                 About
               </NavLink>

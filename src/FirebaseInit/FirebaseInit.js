@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBPDUsNpEspYB-b_q8YUemjg8mp26BJCn0",
-  authDomain: "phonesy-ad56a.firebaseapp.com",
-  projectId: "phonesy-ad56a",
-  storageBucket: "phonesy-ad56a.appspot.com",
-  messagingSenderId: "304429202901",
-  appId: "1:304429202901:web:9b3c2fab35b3c4f36c115c",
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase

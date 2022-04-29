@@ -14,6 +14,7 @@ import Inventory from "./Component/Pages/Inventory/Inventory";
 import RequireAuth from "./RequireAuth/RequireAuth";
 import ManageInventories from "./Component/Pages/ManageInventories/ManageInventories";
 import AddNewItem from "./Component/Pages/AddNewItem/AddNewItem";
+import MyItems from "./Component/Pages/MyItems/MyItems";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         ></Route>
         <Route path="/manage-inventories" element={<ManageInventories />} />
         <Route path="/add-new-item" element={<AddNewItem />} />
+        <Route path="/my-items" element={<MyItems />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

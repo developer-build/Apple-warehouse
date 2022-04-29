@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 
 const InventoryItems = () => {
   const [inventoryItems, setInventoryItems] = useState([]);
-  console.log(inventoryItems);
 
   useEffect(() => {
     fetch("faceData.json")
