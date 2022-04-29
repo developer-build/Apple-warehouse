@@ -1,9 +1,102 @@
 .login-container {
-  height: 70vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fafafc;
+  font-family: "Roboto", sans-serif;
+  flex-direction: column;
 }
 .login {
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  text-align: center;
+}
+.login .lock-btn {
+  background-color: #075cff;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 50px;
+}
+.login h3 {
+  margin: 25px 0;
+  font-weight: 600;
+}
+.google-login-btn {
+  width: 100%;
+  border: 2px solid #b9d2ff;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px -3px #075cff;
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+.google-login-btn img {
+  margin-right: 25px;
+}
+.google-login-btn span {
+  color: #075cff;
+  font-size: 18px;
+  font-weight: 600;
+}
+.login .or-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.or-login div {
+  background-color: rgb(209, 209, 209);
+  height: 2px;
+  width: 50%;
+}
+.or-login span {
+  margin: 0 20px;
+  color: gray;
+  font-weight: 600;
+}
+.login input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px 10px;
+  border: 2px solid rgb(216, 216, 216);
+}
+.login .login-submit-btn {
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 10px;
+  border: none;
+  background-color: #075cff;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 10px;
+  transition: all 0.5s;
+}
+.login-submit-btn:hover {
+  background-color: #2970f5;
+  transform: scale(1.1);
+}
+
+.login-text {
+  text-align: center;
+  width: 50%;
+}
+.login-text span {
+  color: #075cff;
+  cursor: pointer;
+}
+.login-text p {
+  color: black;
+}
+
+/* * Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .login-text {
+    width: 100%;
+  }
 }
