@@ -7,6 +7,8 @@ import About from "./Component/Pages/About/About";
 import Blogs from "./Component/Pages/Blogs/Blogs";
 import Footer from "./Component/Shear/Footer/Footer";
 import Header from "./Component/Shear/Header/Header";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         <Route path="/sign-up" element={<SingUp />} />
       </Routes>
       <Footer />
+      <ToastContainer />
     </>
   );
 }
