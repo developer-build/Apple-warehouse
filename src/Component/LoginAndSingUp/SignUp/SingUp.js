@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import auth from "../../../FirebaseInit/FirebaseInit";
 import {
   useCreateUserWithEmailAndPassword,
+  useSignInWithGoogle,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import Spinners from "../../Shear/Spinners/Spinners";
@@ -14,17 +15,21 @@ const SingUp = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
+  /*******Google Sing Up code start here*******/
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
   /*******name Update code start here*******/
   const [updateProfile, updating, UpdateError] = useUpdateProfile(auth);
 
   /*******Loading Spinner code start here*******/
-  if (loading || updating) {
+  if (loading || updating || googleLoading) {
     return <Spinners />;
   }
   /*******Error message  code start here*******/
   let errorMessage;
-  if (error || UpdateError) {
-    errorMessage = error?.message || UpdateError?.message;
+  if (error || UpdateError || googleError) {
+    errorMessage =
+      error?.message || UpdateError?.message || googleError?.message;
   }
 
   /*******Submit Handler  code start here*******/
@@ -47,7 +52,10 @@ const SingUp = () => {
             <img style={{ width: "30px" }} src={lock} alt="" />
           </button>
           <h3>Hey, welcome to Phonesy !!!</h3>
-          <button className="google-login-btn">
+          <button
+            onClick={() => signInWithGoogle()}
+            className="google-login-btn"
+          >
             <img style={{ width: "35px" }} src={googleIcon} alt="" />
             <span>Continue With Google</span>
           </button>
