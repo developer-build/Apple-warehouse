@@ -1,7 +1,7 @@
 import React from "react";
-import "./inventory.css";
+import "./inventoryItem.css";
 
-const Inventory = ({ inventory }) => {
+const InventoryItem = ({ inventory }) => {
   const { name, img, price, quantity, supplierName, description } = inventory;
 
   return (
@@ -23,4 +23,4 @@ const Inventory = ({ inventory }) => {
   );
 };
 
-export default Inventory;
+export default InventoryItem;

@@ -9,6 +9,7 @@ import Footer from "./Component/Shear/Footer/Footer";
 import Header from "./Component/Shear/Header/Header";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import NotFound from "./Component/Pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SingUp />} />
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer />
       <ToastContainer />
