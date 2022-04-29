@@ -1,0 +1,35 @@
+.footer-container {
+  background: #4a5c70;
+  font-family: "Poppins", sans-serif;
+}
+.footer-container h3 {
+  color: #c7d3e2;
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.footer-container p {
+  font-size: 14px;
+  color: rgb(255, 255, 255, 0.7);
+  text-align: justify;
+  margin-top: 12px;
+  width: 80%;
+}
+.footer-container li {
+  list-style: none;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.footer-container li a {
+  text-decoration: none;
+  color: white;
+}
+.footer-navbar {
+  background: #3a4b5e;
+  padding: 15px;
+}
+.social a {
+  margin-left: 35px;
+}

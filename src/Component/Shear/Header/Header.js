@@ -9,10 +9,10 @@ import "./Header.css";
 const Header = () => {
   return (
     <div className=" sticky-top navbar-container">
-      <Navbar collapseOnSelect className="py-1" expand="lg" variant="dark">
+      <Navbar collapseOnSelect expand="lg" variant="dark">
         <Container>
           <Navbar.Brand as={Link} to="/">
-            Phonesy Warehouse
+            Phonesy
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

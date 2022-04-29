@@ -5,6 +5,7 @@ import Login from "./Component/LoginAndSingUp/Login/Login";
 import SingUp from "./Component/LoginAndSingUp/SignUp/SingUp";
 import About from "./Component/Pages/About/About";
 import Blogs from "./Component/Pages/Blogs/Blogs";
+import Footer from "./Component/Shear/Footer/Footer";
 import Header from "./Component/Shear/Header/Header";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SingUp />} />
       </Routes>
+      <Footer />
     </>
   );
 }
