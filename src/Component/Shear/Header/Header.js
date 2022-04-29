@@ -3,10 +3,18 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignIn } from "@fortawesome/free-solid-svg-icons";
 import { Link, NavLink } from "react-router-dom";
+import { signOut } from "firebase/auth";
 
 import "./Header.css";
+import auth from "../../../FirebaseInit/FirebaseInit";
+import { useAuthState } from "react-firebase-hooks/auth";
+import Spinners from "../Spinners/Spinners";
 
 const Header = () => {
+  let [user, loading] = useAuthState(auth);
+  if (loading) {
+    return <Spinners />;
+  }
   return (
     <div className=" sticky-top navbar-container">
       <Navbar collapseOnSelect expand="lg" variant="dark">
@@ -28,11 +36,17 @@ const Header = () => {
               </NavLink>
             </Nav>
             <Nav>
-              <Nav.Link as={Link} to="/login">
-                <button className="login-btn">
-                  Login <FontAwesomeIcon className="ps-2" icon={faSignIn} />
+              {user ? (
+                <button onClick={() => signOut(auth)} className="login-btn">
+                  Sign Out <FontAwesomeIcon className="ps-2" icon={faSignIn} />
                 </button>
-              </Nav.Link>
+              ) : (
+                <Nav.Link as={Link} to="/login">
+                  <button className="login-btn">
+                    Login <FontAwesomeIcon className="ps-2" icon={faSignIn} />
+                  </button>
+                </Nav.Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -10,6 +10,8 @@ import Header from "./Component/Shear/Header/Header";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NotFound from "./Component/Pages/NotFound/NotFound";
+import Inventory from "./Component/Pages/Inventory/Inventory";
+import RequireAuth from "./RequireAuth/RequireAuth";
 
 function App() {
   return (
@@ -21,6 +23,14 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SingUp />} />
+        <Route
+          path="/inventory/:id"
+          element={
+            <RequireAuth>
+              <Inventory />
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer />

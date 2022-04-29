@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import "./login.css";
 import googleIcon from "../../../Assets/Icons/google.png";
 import lock from "../../../Assets/Icons/lock.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../FirebaseInit/FirebaseInit";
 import {
   useSignInWithEmailAndPassword,
@@ -11,6 +11,8 @@ import {
 import Spinners from "../../Shear/Spinners/Spinners";
 
 const Login = () => {
+  let navigate = useNavigate();
+  let location = useLocation();
   const emailRef = useRef("");
   const passwordRef = useRef("");
 
@@ -20,6 +22,13 @@ const Login = () => {
   /*******Google Sing Up code start here*******/
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
+
+  let from = location?.state?.from?.pathname || "/";
+
+  /*******user code start here*******/
+  if (user || googleUser) {
+    navigate(from, { replace: true });
+  }
 
   /*******Loading Spinner code start here*******/
   if (loading || googleLoading) {
