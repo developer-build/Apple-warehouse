@@ -67,12 +67,18 @@ const SingUp = () => {
           </div>
 
           <form onSubmit={submitHandler}>
-            <input type="text" placeholder="Enter name" name="name" />
-            <input type="email" placeholder="Enter Email" name="email" />
+            <input required type="text" placeholder="Enter name" name="name" />
+            <input
+              required
+              type="email"
+              placeholder="Enter Email"
+              name="email"
+            />
             <input
               type="password"
               placeholder="Enter Password"
               name="password"
+              required
             />
             <button className="login-submit-btn">Sign In</button>
           </form>
