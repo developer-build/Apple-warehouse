@@ -17,7 +17,7 @@ const Inventory = ({ inventory }) => {
           <h6>Quantity: {quantity}</h6>
           <h6>Supplier Name: {supplierName}</h6>
         </div>
-        <button className="inventory-btn">Add To</button>
+        <button className="inventory-btn">Stock Update</button>
       </div>
     </div>
   );

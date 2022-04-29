@@ -1,28 +1,37 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSignIn } from "@fortawesome/free-solid-svg-icons";
+import { Link, NavLink } from "react-router-dom";
+
+import "./Header.css";
 
 const Header = () => {
   return (
-    <div className=" sticky-top">
-      <Navbar
-        collapseOnSelect
-        className="py-3 shadow"
-        expand="lg"
-        bg="dark"
-        variant="dark"
-      >
+    <div className=" sticky-top navbar-container">
+      <Navbar collapseOnSelect className="py-1" expand="lg" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Phonesy</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">
+            Phonesy Warehouse
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="m-auto">
-              <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
+              <NavLink to="/" className="navigation-link">
+                Home
+              </NavLink>
+              <NavLink to="/about" className="navigation-link">
+                About
+              </NavLink>
+              <NavLink to="/blogs" className="navigation-link">
+                Blog
+              </NavLink>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
-                Dank memes
+              <Nav.Link as={Link} to="/login">
+                <button className="login-btn">
+                  Login <FontAwesomeIcon className="ps-2" icon={faSignIn} />
+                </button>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
