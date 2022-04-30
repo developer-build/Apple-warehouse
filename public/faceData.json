@@ -2,55 +2,61 @@
   {
     "name": "Apple iPhone 12",
     "img": "https://i.ibb.co/nQpMhWh/Screenshot-33-removebg-preview.png",
-    "price": 50,
-    "quantity": 10,
-    "supplierName": "James",
+    "price": 99,
+    "quantity": 40,
+    "supplierName": "Amelia",
     "description": "Stream your favourite movies, TV shows and games with super-fast 5G",
-    "_id": 1
+    "_id": 1,
+    "sold": 55
   },
   {
-    "name": "Apple iPhone 12",
-    "img": "https://i.ibb.co/nQpMhWh/Screenshot-33-removebg-preview.png",
-    "price": 50,
-    "quantity": 10,
-    "supplierName": "James",
-    "description": "Stream your favourite movies, TV shows and games with super-fast 5G",
-    "_id": 2
+    "name": "Nokia XR20 5G",
+    "img": "https://i.ibb.co/pjkWNLW/Untitled-design-2-removebg-preview.png",
+    "price": 80,
+    "quantity": 13,
+    "supplierName": "Isabella",
+    "description": "Android OS upgrades until 2024 and a 2-year warranty 6GB RAM / 128GB",
+    "_id": 2,
+    "sold": 75
   },
   {
-    "name": "Apple iPhone 12",
-    "img": "https://i.ibb.co/nQpMhWh/Screenshot-33-removebg-preview.png",
-    "price": 50,
-    "quantity": 10,
-    "supplierName": "James",
-    "description": "Stream your favourite movies, TV shows and games with super-fast 5G",
-    "_id": 3
+    "name": "SAMSUNG Galaxy S20",
+    "img": "https://i.ibb.co/m69Dk8c/Untitled-design-removebg-preview.png",
+    "price": 90,
+    "quantity": 70,
+    "supplierName": "Charlotte",
+    "description": "Pro-Grade Camera: Features High-Powered Pro Lenses For Beautiful Photographs ",
+    "_id": 3,
+    "sold": 44
   },
   {
-    "name": "Apple iPhone 12",
-    "img": "https://i.ibb.co/nQpMhWh/Screenshot-33-removebg-preview.png",
-    "price": 50,
-    "quantity": 10,
-    "supplierName": "James",
-    "description": "Stream your favourite movies, TV shows and games with super-fast 5G",
-    "_id": 4
+    "name": "total wireless Alcatel TCL A3X",
+    "img": "https://i.ibb.co/846zJ3p/Untitled-design-removebg-preview.png",
+    "price": 30,
+    "quantity": 17,
+    "supplierName": "Oliver",
+    "description": "The 13MP triple rear camera captures small details and artistic depth in HD",
+    "_id": 4,
+    "sold": 95
   },
   {
-    "name": "Apple iPhone 12",
-    "img": "https://i.ibb.co/nQpMhWh/Screenshot-33-removebg-preview.png",
-    "price": 50,
-    "quantity": 10,
-    "supplierName": "James",
-    "description": "Stream your favourite movies, TV shows and games with super-fast 5G",
-    "_id": 5
+    "name": "Tracfone Alcatel TCL A4X 5G",
+    "img": "https://i.ibb.co/3kw66Dj/Untitled-design-2-removebg-preview.png",
+    "price": 55,
+    "quantity": 26,
+    "supplierName": "William",
+    "description": "Stunning Cinematic Viewing: The TCL A4X 5G features a 6.52” HD+ display powered",
+    "_id": 5,
+    "sold": 77
   },
   {
-    "name": "Apple iPhone 12",
-    "img": "https://i.ibb.co/nQpMhWh/Screenshot-33-removebg-preview.png",
-    "price": 50,
-    "quantity": 10,
+    "name": "Total Wireless BLU View 3",
+    "img": "https://i.ibb.co/6mbnh90/Untitled-design-1-removebg-preview.png",
+    "price": 40,
+    "quantity": 51,
     "supplierName": "James",
-    "description": "Stream your favourite movies, TV shows and games with super-fast 5G",
-    "_id": 6
+    "description": "Featuring 13MP Main + LED Flash 8MP for Selfie lovers with 1080p at 30fps Video Record",
+    "_id": 6,
+    "sold": 32
   }
 ]
