@@ -30,7 +30,10 @@ const Footer = () => {
             <h3>Social</h3>
 
             <li>
-              <a href="/" target="black">
+              <a
+                href="https://www.facebook.com/DeveloperShahadatHossain/"
+                target="black"
+              >
                 Facebook
               </a>
             </li>
@@ -65,7 +68,10 @@ const Footer = () => {
               <p> Copyright &copy; 2022 Phonesy WareHouse</p>
             </div>
             <div className="social">
-              <a href="/" target="black">
+              <a
+                href="https://www.facebook.com/DeveloperShahadatHossain/"
+                target="black"
+              >
                 <img src={facebookIcon} style={{ width: "30px" }} alt="" />
               </a>
 

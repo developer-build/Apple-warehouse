@@ -10,16 +10,16 @@ const Banner = () => {
           <div>
             <div className="banner-text">
               <h1>
-                Warehouse I Phone
+                You are welcome
                 <br />
-                8GB 4G Black
+                Phonesy Warehouse
               </h1>
               <p>
-                Buy 1 Warehouse phone, get 1 Warehouse mobile SIM card for FREE
-                Offer ends 02/08/2022
+                If you can warehouse your product. But you're coming to the
+                right place. We are working with twenty brand
               </p>
               <div>
-                <button>Stock Update</button>
+                <button>Stock Up Now</button>
               </div>
             </div>
           </div>

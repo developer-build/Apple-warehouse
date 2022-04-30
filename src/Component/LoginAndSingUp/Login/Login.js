@@ -5,10 +5,12 @@ import lock from "../../../Assets/Icons/lock.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../FirebaseInit/FirebaseInit";
 import {
+  useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import Spinners from "../../Shear/Spinners/Spinners";
+import { toast } from "react-toastify";
 
 const Login = () => {
   let navigate = useNavigate();
@@ -23,6 +25,10 @@ const Login = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
 
+  /*******use Send Password Reset Email code start here*******/
+  const [sendPasswordResetEmail, sending, PasswordError] =
+    useSendPasswordResetEmail(auth);
+
   let from = location?.state?.from?.pathname || "/";
 
   /*******user code start here*******/
@@ -31,13 +37,14 @@ const Login = () => {
   }
 
   /*******Loading Spinner code start here*******/
-  if (loading || googleLoading) {
+  if (loading || googleLoading || sending) {
     return <Spinners />;
   }
   /*******Error message  code start here*******/
   let errorMessage;
-  if (error || googleError) {
-    errorMessage = error?.message || googleError?.message;
+  if (error || googleError || PasswordError) {
+    errorMessage =
+      error?.message || googleError?.message || PasswordError?.message;
   }
 
   const submitHandler = (e) => {
@@ -89,7 +96,18 @@ const Login = () => {
           </form>
         </div>
         <div className="login-text row row-cols-md-2">
-          <span>Forget Password?</span>
+          <span
+            onClick={async () => {
+              if (emailRef.current.value) {
+                await sendPasswordResetEmail(emailRef.current.value);
+                toast("please check your email!");
+              } else {
+                toast("please, Enter  email!");
+              }
+            }}
+          >
+            Forget Password?
+          </span>
           <p>
             Don't have an account?
             <Link to="/sign-up" style={{ color: "#075cff" }}>

@@ -4,7 +4,7 @@
   font-family: "Poppins", sans-serif;
 }
 .navbar-container .navigation-link {
-  font-size: 18px;
+  font-size: 16px;
   margin: 10px 10px;
   color: rgb(255, 255, 255, 0.9);
   text-decoration: none;
@@ -16,7 +16,8 @@
 }
 
 .navbar-container .login-btn {
-  background-color: #fe8033;
+  background-color: transparent;
+  border: 2px solid white;
   padding: 10px 35px;
   color: white;
   font-size: 18px;

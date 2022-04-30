@@ -1,6 +1,6 @@
 import googleIcon from "../../../Assets/Icons/google.png";
 import lock from "../../../Assets/Icons/lock.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../FirebaseInit/FirebaseInit";
 import {
   useCreateUserWithEmailAndPassword,
@@ -11,6 +11,7 @@ import Spinners from "../../Shear/Spinners/Spinners";
 import { toast } from "react-toastify";
 
 const SingUp = () => {
+  const navigate = useNavigate();
   /*******use Create With Email And Password code start here*******/
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
@@ -20,6 +21,10 @@ const SingUp = () => {
     useSignInWithGoogle(auth);
   /*******name Update code start here*******/
   const [updateProfile, updating, UpdateError] = useUpdateProfile(auth);
+
+  if (user || googleUser) {
+    navigate("/");
+  }
 
   /*******Loading Spinner code start here*******/
   if (loading || updating || googleLoading) {
@@ -42,7 +47,7 @@ const SingUp = () => {
     await updateProfile({ displayName: name });
     toast("please check your email!");
   };
-  console.log(user);
+
   return (
     <div>
       <div className="login-container">
