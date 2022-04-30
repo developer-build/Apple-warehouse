@@ -1,0 +1,13 @@
+.myItems-btn {
+  background-color: black;
+  color: white;
+  padding: 7px 30px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.myItems-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+}
