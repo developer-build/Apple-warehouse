@@ -6,24 +6,62 @@ import "./Inventory.css";
 
 const Inventory = () => {
   const { id } = useParams();
+  const [reload, setReload] = useState(false);
   const [inventoryItem, setInventoryItem] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/inventory/${id}`;
+    const url = `https://intense-dusk-83706.herokuapp.com/inventory/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setInventoryItem(data));
-  }, [id]);
+  }, [id, reload]);
+
+  const deliveredHandler = (quantity) => {
+    if (quantity > 1) {
+      let quantityMinus = quantity - 1;
+
+      const url = `https://intense-dusk-83706.herokuapp.com/quantity-minus/${id}`;
+      fetch(url, {
+        method: "PUT",
+        body: JSON.stringify({ quantity: quantityMinus }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => {
+          setReload(!reload);
+        });
+    }
+  };
+  const IncreaseHandler = (e) => {
+    e.preventDefault();
+    const number = parseInt(e.target.number.value);
+    let quantity = inventoryItem.quantity + number;
+    const url = `https://intense-dusk-83706.herokuapp.com/quantity-minus/${id}`;
+    fetch(url, {
+      method: "PUT",
+      body: JSON.stringify({ quantity }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        setReload(!reload);
+        e.target.reset();
+      });
+  };
 
   return (
     <div>
       <div className="add_quantity-container">
         <h3>Increase the quantity of the product</h3>
-        <form>
+        <form onSubmit={IncreaseHandler}>
           <input
             type="number"
             placeholder="Enter quantity number"
-            name="quantity"
+            name="number"
           />
           <button>Submit</button>
         </form>
@@ -52,7 +90,11 @@ const Inventory = () => {
                 <h6>Sold: {inventoryItem?.sold}</h6>
                 <h6>Supplier Name: {inventoryItem?.supplierName}</h6>
 
-                <button>Delivered</button>
+                <button
+                  onClick={() => deliveredHandler(inventoryItem?.quantity)}
+                >
+                  Delivered
+                </button>
               </div>
             </div>
           </div>
