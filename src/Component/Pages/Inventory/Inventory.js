@@ -56,7 +56,7 @@ const Inventory = () => {
   return (
     <div>
       <div className="add_quantity-container">
-        <h3>Increase the quantity of the product</h3>
+        <h3>Increase the quantity of the Items</h3>
         <form onSubmit={IncreaseHandler}>
           <input
             type="number"

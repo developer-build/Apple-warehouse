@@ -16,7 +16,7 @@ const Footer = () => {
               In our warehouse, we try to store the best products. You can have
               your product in our warehouse store without any worries
             </p>
-            <h2>Phonesy</h2>
+            <h2>Apple Stock</h2>
           </div>
           <div>
             <h3>Online help</h3>
@@ -65,7 +65,7 @@ const Footer = () => {
         <div className="container">
           <div className="row row-cols-md-2 justify-content-center align-items-center">
             <div>
-              <p> Copyright &copy; 2022 Phonesy WareHouse</p>
+              <p> Copyright &copy; 2022 Apple Stock</p>
             </div>
             <div className="social">
               <a

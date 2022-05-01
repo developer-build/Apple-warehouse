@@ -12,7 +12,7 @@ const Banner = () => {
               <h1>
                 You are welcome
                 <br />
-                Phonesy Warehouse
+                Apple Stock Warehouse
               </h1>
               <p>
                 If you can warehouse your product. But you're coming to the
