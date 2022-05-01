@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "./Suppliers.css";
-// import required modules
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import facebookIcon from "../../../Assets/Icons/facebook.png";
+import instagramIcon from "../../../Assets/Icons/instragram.png";
+import twitterIcon from "../../../Assets/Icons/twitter.png";
 
 const Suppliers = () => {
   const [suppliers, setSuppliers] = useState([]);
   console.log(suppliers);
   useEffect(() => {
-    fetch("faceData.json")
+    fetch(" https://intense-dusk-83706.herokuapp.com/supplier")
       .then((res) => res.json())
       .then((data) => setSuppliers(data));
   }, []);
@@ -44,7 +44,20 @@ const Suppliers = () => {
             <SwiperSlide>
               <img src={items?.img} alt="" />
               <h4>{items?.name}</h4>
-              <p>{items?.description}</p>
+              <p>
+                {items?.description}
+                <div className="d-flex justify-content-center align-items-center">
+                  <img style={{ width: "20px" }} src={facebookIcon} alt="" />
+                  <img
+                    className="mx-2"
+                    style={{ width: "20px" }}
+                    src={instagramIcon}
+                    alt=""
+                  />
+
+                  <img style={{ width: "20px" }} src={twitterIcon} alt="" />
+                </div>
+              </p>
             </SwiperSlide>
           ))}
         </Swiper>

@@ -4,6 +4,7 @@ import facebookIcon from "../../../Assets/Icons/facebook.png";
 import instagramIcon from "../../../Assets/Icons/instragram.png";
 import linkedinIcon from "../../../Assets/Icons/linkedin.png";
 import TwitterIcon from "../../../Assets/Icons/twitter.png";
+import apple from "../../../Assets/Icons/app-store.png";
 
 const Footer = () => {
   return (
@@ -91,6 +92,10 @@ const Footer = () => {
 
               <a target="black" href="https://twitter.com/wd_shahadat">
                 <img src={TwitterIcon} style={{ width: "30px" }} alt="" />
+              </a>
+
+              <a href="/" className="ms-5">
+                <img src={apple} alt="" />
               </a>
             </div>
           </div>
