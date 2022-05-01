@@ -1,6 +1,6 @@
 .our-stock-item-type-container {
   background-color: black;
-  padding: 50px;
+  padding: 60px 0px;
 }
 .our-stock-item-type-container h2 {
   line-height: 1.5;
@@ -11,4 +11,11 @@
   line-height: 1.6;
   font-size: 17px;
   text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+  .our-stock-item-type-container {
+    background-color: black;
+    padding: 10px;
+  }
 }

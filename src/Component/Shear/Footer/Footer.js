@@ -94,8 +94,8 @@ const Footer = () => {
                 <img src={TwitterIcon} style={{ width: "30px" }} alt="" />
               </a>
 
-              <a href="/" className="ms-5">
-                <img src={apple} alt="" />
+              <a href="/" className="ms-5 ">
+                <img className="pt-2" src={apple} alt="" />
               </a>
             </div>
           </div>
