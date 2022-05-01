@@ -7,12 +7,12 @@ import { Link } from "react-router-dom";
 import useInventory from "../../../Hook/useInventory";
 
 const InventoryItems = () => {
-  const [inventory, setInventory] = useInventory();
+  const [inventory] = useInventory();
 
   return (
     <div className="inventory-items-container">
       <div className="container">
-        <h2 className="text-center py-5">Our inventory is phone items</h2>
+        <h2 className="text-center py-5">Our inventory items</h2>
         <div className="row row-cols-lg-3 row-cols-md-2 g-5">
           {inventory.slice(0, 6).map((inventoryItem) => (
             <Inventory inventory={inventoryItem} key={inventoryItem._id} />
