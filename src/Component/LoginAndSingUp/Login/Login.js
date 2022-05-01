@@ -47,11 +47,22 @@ const Login = () => {
       error?.message || googleError?.message || PasswordError?.message;
   }
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(email, password);
+    fetch(" https://intense-dusk-83706.herokuapp.com/login", {
+      method: "POST",
+      body: JSON.stringify({ email }),
+      headers: {
+        "Content-type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        localStorage.setItem("accessToken", result.accessToken);
+      });
   };
 
   return (

@@ -11,7 +11,7 @@ import twitterIcon from "../../../Assets/Icons/twitter.png";
 
 const Suppliers = () => {
   const [suppliers, setSuppliers] = useState([]);
-  console.log(suppliers);
+
   useEffect(() => {
     fetch(" https://intense-dusk-83706.herokuapp.com/supplier")
       .then((res) => res.json())
@@ -41,10 +41,10 @@ const Suppliers = () => {
           modules={[EffectCoverflow, Pagination, Autoplay]}
         >
           {suppliers.map((items) => (
-            <SwiperSlide>
-              <img src={items?.img} alt="" />
+            <SwiperSlide key={items._id}>
+              <img className="supplier-img" src={items?.img} alt="" />
               <h4>{items?.name}</h4>
-              <p>
+              <div className="supplier-description">
                 {items?.description}
                 <div className="d-flex justify-content-center align-items-center">
                   <img style={{ width: "20px" }} src={facebookIcon} alt="" />
@@ -57,7 +57,7 @@ const Suppliers = () => {
 
                   <img style={{ width: "20px" }} src={twitterIcon} alt="" />
                 </div>
-              </p>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
