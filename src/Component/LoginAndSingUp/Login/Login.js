@@ -11,6 +11,8 @@ import {
 } from "react-firebase-hooks/auth";
 import Spinners from "../../Shear/Spinners/Spinners";
 import { toast } from "react-toastify";
+import axios from "axios";
+import useAccessToken from "../../../Hook/useAccessToken";
 
 const Login = () => {
   let navigate = useNavigate();
@@ -21,6 +23,7 @@ const Login = () => {
   /*******use Sign In With Email And Password code start here*******/
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+
   /*******Google Sing Up code start here*******/
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
@@ -29,10 +32,12 @@ const Login = () => {
   const [sendPasswordResetEmail, sending, PasswordError] =
     useSendPasswordResetEmail(auth);
 
-  let from = location?.state?.from?.pathname || "/";
+  const [token] = useAccessToken(user || googleUser);
 
-  /*******user code start here*******/
-  if (user || googleUser) {
+  let from = location?.state?.from?.pathname || "/my-items";
+
+  // /*******user code start here*******/
+  if (token) {
     navigate(from, { replace: true });
   }
 
@@ -52,17 +57,6 @@ const Login = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     await signInWithEmailAndPassword(email, password);
-    fetch(" https://intense-dusk-83706.herokuapp.com/login", {
-      method: "POST",
-      body: JSON.stringify({ email }),
-      headers: {
-        "Content-type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        localStorage.setItem("accessToken", result.accessToken);
-      });
   };
 
   return (

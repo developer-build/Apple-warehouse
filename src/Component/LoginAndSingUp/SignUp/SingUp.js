@@ -9,6 +9,7 @@ import {
 } from "react-firebase-hooks/auth";
 import Spinners from "../../Shear/Spinners/Spinners";
 import { toast } from "react-toastify";
+import useAccessToken from "../../../Hook/useAccessToken";
 
 const SingUp = () => {
   const navigate = useNavigate();
@@ -22,7 +23,9 @@ const SingUp = () => {
   /*******name Update code start here*******/
   const [updateProfile, updating, UpdateError] = useUpdateProfile(auth);
 
-  if (user || googleUser) {
+  const [token] = useAccessToken(user || googleUser);
+
+  if (token) {
     navigate("/");
   }
 
