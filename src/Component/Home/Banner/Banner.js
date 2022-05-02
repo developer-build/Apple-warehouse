@@ -1,6 +1,9 @@
 import React from "react";
 import "./Banner.css";
 import banner from "../../../Assets/Images/banner.png";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
 const Banner = () => {
   return (
@@ -18,8 +21,13 @@ const Banner = () => {
                 If you can warehouse your product. But you're coming to the
                 right place. We are working with twenty brand
               </p>
-              <div>
-                <button>Stock Up Now</button>
+              <div className="mt-5">
+                <Link to="/manage-inventories">
+                  <button className="manage_inventories_btn">
+                    Manage Inventories
+                    <FontAwesomeIcon className="ps-2" icon={faAnglesRight} />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -17,4 +17,9 @@ h2 {
   padding: 10px 15px;
   font-size: 18px;
   border-radius: 50px;
+  transition: all 0.5s;
+}
+.manage_inventories_btn:hover {
+  background-color: #fe8033;
+  transform: scale(1.1);
 }

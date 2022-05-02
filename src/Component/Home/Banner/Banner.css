@@ -13,23 +13,11 @@ h1 {
   color: white;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 .banner-container p {
   color: rgb(255, 255, 255);
   font-size: 18px;
   line-height: 1.7;
-}
-.banner-container button {
-  background-color: #fe8033;
-  padding: 10px 35px;
-  color: white;
-  font-size: 18px;
-  border-radius: 15px;
-  cursor: pointer;
   margin-top: 25px;
-  transition: 0.5s;
-}
-.banner-container button:hover {
-  background-color: #c45c16;
 }

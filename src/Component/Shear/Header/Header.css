@@ -2,6 +2,7 @@
 .navbar-container {
   background: #000;
   font-family: "Poppins", sans-serif;
+  box-shadow: 2px 2px 4px rgb(14, 14, 14);
 }
 .navbar-container .navigation-link {
   font-size: 16px;
