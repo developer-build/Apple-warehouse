@@ -20,7 +20,7 @@ const StockItemType = () => {
           </div>
           <div>
             <div>
-              <h2>What products do e have in our Apple stock warehouse</h2>
+              <h2>What products do we have in our Apple stock warehouse</h2>
               <p>
                 We stock all kinds of Apple products. We have stock in iPhone,
                 Mac, Danger, Wearables, etc. That's why we can keep Apple

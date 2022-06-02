@@ -4,10 +4,19 @@ import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
 import "./inventoryItems.css";
 import { Link } from "react-router-dom";
-import useInventory from "../../../Hook/useInventory";
+import Spinners from "../../Shear/Spinners/Spinners";
+import { useQuery } from "react-query";
 
 const InventoryItems = () => {
-  const [inventory] = useInventory();
+  const { isLoading, data: inventory } = useQuery(["inventory"], () =>
+    fetch("https://intense-dusk-83706.herokuapp.com/inventory").then((res) =>
+      res.json()
+    )
+  );
+
+  if (isLoading) {
+    return <Spinners />;
+  }
 
   return (
     <div className="inventory-items-container">

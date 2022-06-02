@@ -15,32 +15,39 @@ import RequireAuth from "./RequireAuth/RequireAuth";
 import ManageInventories from "./Component/Pages/ManageInventories/ManageInventories";
 import AddNewItem from "./Component/Pages/AddNewItem/AddNewItem";
 import MyItems from "./Component/Pages/MyItems/MyItems";
+import OurTeam from "./Component/Home/OurTeam/OurTeam";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/sign-up" element={<SingUp />} />
-        <Route
-          path="/inventory/:id"
-          element={
-            <RequireAuth>
-              <Inventory />
-            </RequireAuth>
-          }
-        ></Route>
-        <Route path="/manage-inventories" element={<ManageInventories />} />
-        <Route path="/add-new-item" element={<AddNewItem />} />
-        <Route path="/my-items" element={<MyItems />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer />
-      <ToastContainer />
+      <QueryClientProvider client={queryClient}>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/sign-up" element={<SingUp />} />
+          <Route path="/our-team" element={<OurTeam />} />
+          <Route
+            path="/inventory/:id"
+            element={
+              <RequireAuth>
+                <Inventory />
+              </RequireAuth>
+            }
+          ></Route>
+          <Route path="/manage-inventories" element={<ManageInventories />} />
+          <Route path="/add-new-item" element={<AddNewItem />} />
+          <Route path="/my-items" element={<MyItems />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+        <ToastContainer />
+      </QueryClientProvider>
     </>
   );
 }

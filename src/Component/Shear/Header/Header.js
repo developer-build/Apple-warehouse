@@ -51,6 +51,9 @@ const Header = () => {
                 ""
               )}
 
+              <NavLink to="/our-team" className="navigation-link">
+                Our Team
+              </NavLink>
               <NavLink to="/about" className="navigation-link">
                 About
               </NavLink>

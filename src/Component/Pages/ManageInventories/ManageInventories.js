@@ -1,13 +1,22 @@
 import React, { useState } from "react";
 import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import useInventory from "../../../Hook/useInventory";
 import "./ManageInventories.css";
 import deleteIcon from "../../../Assets/Icons/delete.png";
+import Spinners from "../../Shear/Spinners/Spinners";
+import { useQuery } from "react-query";
 
 const ManageInventories = () => {
   const [reload, setReload] = useState(false);
-  const [inventory] = useInventory(reload);
+  const { isLoading, data: inventory } = useQuery(["inventory", reload], () =>
+    fetch("https://intense-dusk-83706.herokuapp.com/inventory").then((res) =>
+      res.json()
+    )
+  );
+
+  if (isLoading) {
+    return <Spinners />;
+  }
 
   const deleteHandler = (id) => {
     const confirm = window.confirm("are you sure?");
